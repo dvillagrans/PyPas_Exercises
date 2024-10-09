@@ -3,7 +3,7 @@ name: Agregar comentarios a main.py y pushear a la rama diego
 on:
   push:
     branches:
-      - main  # Ejecutar en cada push a la rama main
+      - main  
   pull_request:
 
 jobs:
@@ -32,6 +32,10 @@ jobs:
       run: |
         git checkout -b diego || git checkout diego
 
+    - name: Obtener cambios remotos en la rama diego
+      run: |
+        git pull origin diego --rebase  # Obtener los últimos cambios remotos y rebasear
+
     - name: Commitear los cambios
       run: |
         git add .
@@ -39,6 +43,6 @@ jobs:
 
     - name: Pushear cambios a la rama diego
       env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}  # Utiliza el PAT aquí
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}  
       run: |
         git push https://$GITHUB_TOKEN@github.com/${{ github.repository }} diego
