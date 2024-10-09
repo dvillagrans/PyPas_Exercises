@@ -1,0 +1,44 @@
+name: Agregar comentarios a main.py y pushear a la rama diego
+
+on:
+  push:
+    branches:
+      - main # Ejecutar en cada push a la rama main
+  pull_request:
+
+jobs:
+  agregar_comentarios:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Ejecutar script para agregar comentarios
+        run: |
+          python3 script.py  # Ejecuta tu script para modificar archivos
+
+      - name: Configurar nombre y correo para Git
+        run: |
+          git config --global user.name "Diego Villagrán"
+          git config --global user.email "diegovillasal@gmail.com"
+
+      - name: Crear nueva rama diego si no existe
+        run: |
+          git checkout -b diego || git checkout diego
+
+      - name: Commitear los cambios
+        run: |
+          git add .
+          git commit -m "Agregar comentarios a main.py"
+
+      - name: Pushear cambios a la rama diego
+        run: |
+          git push origin diego
