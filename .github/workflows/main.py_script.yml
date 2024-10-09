@@ -3,8 +3,7 @@ name: Agregar comentarios a main.py y pushear a la rama diego
 on:
   push:
     branches:
-      - main # Ejecutar en cada push a la rama main
-  pull_request:
+      - main
 
 jobs:
   agregar_comentarios:
@@ -23,7 +22,7 @@ jobs:
 
       - name: Ejecutar script para agregar comentarios
         run: |
-          python3 script.py  # Ejecuta tu script para modificar archivos
+          python3 script.py
 
       - name: Configurar nombre y correo para Git
         run: |
