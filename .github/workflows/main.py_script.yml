@@ -3,7 +3,7 @@ name: Agregar comentarios a main.py y pushear a la rama diego
 on:
   push:
     branches:
-      - main
+      - main  # Ejecutar en cada push a la rama main
   pull_request:
 
 jobs:
@@ -28,17 +28,16 @@ jobs:
         git config --global user.name "AlexanderSanchezGarcia"
         git config --global user.email "alexander.sanchez.gm@gmail.com"
 
-    - name: Almacenar los cambios locales sin stage
+    - name: Borrar la rama diego local y remotamente (si existe)
       run: |
-        git stash
+        # Borra la rama diego remotamente
+        git push origin --delete diego || echo "No se encontró la rama remota diego"
+        # Borra la rama diego localmente
+        git branch -D diego || echo "No se encontró la rama local diego"
 
-    - name: Obtener cambios remotos en la rama diego
+    - name: Crear de nuevo la rama diego
       run: |
-        git pull origin diego --rebase
-
-    - name: Aplicar de nuevo los cambios locales
-      run: |
-        git stash pop
+        git checkout -b diego
 
     - name: Commitear los cambios
       run: |
@@ -47,6 +46,6 @@ jobs:
 
     - name: Pushear cambios a la rama diego
       env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}  
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}  # Utiliza el PAT aquí
       run: |
         git push https://$GITHUB_TOKEN@github.com/${{ github.repository }} diego
