@@ -3,7 +3,7 @@ name: Agregar comentarios a main.py y pushear a la rama diego
 on:
   push:
     branches:
-      - main  
+      - main
   pull_request:
 
 jobs:
@@ -28,13 +28,17 @@ jobs:
         git config --global user.name "AlexanderSanchezGarcia"
         git config --global user.email "alexander.sanchez.gm@gmail.com"
 
-    - name: Crear nueva rama diego si no existe
+    - name: Almacenar los cambios locales sin stage
       run: |
-        git checkout -b diego || git checkout diego
+        git stash
 
     - name: Obtener cambios remotos en la rama diego
       run: |
-        git pull origin diego --rebase  # Obtener los últimos cambios remotos y rebasear
+        git pull origin diego --rebase
+
+    - name: Aplicar de nuevo los cambios locales
+      run: |
+        git stash pop
 
     - name: Commitear los cambios
       run: |
