@@ -1,4 +1,6 @@
 import os
+from datetime import datetime
+fecha_actual = datetime.now().strftime("%Y/%m/%d")
 
 # Comentarios a insertar al inicio
 comentarios_inicio = [
@@ -6,6 +8,8 @@ comentarios_inicio = [
     "# DAD",
     "# Fecha de entrega: 2024/09/27",
     "# Grupo 4AV1",
+    "# Fecha de entrega: {$fecha_actual}",
+    
 ]
 
 # Comentario a insertar al final
