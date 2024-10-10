@@ -8,8 +8,7 @@ comentarios_inicio = [
     "# DAD",
     "# Fecha de entrega: 2024/09/27",
     "# Grupo 4AV1",
-    "# Fecha de entrega: {$fecha_actual}",
-    
+    f"# Fecha actual: {fecha_actual}"
 ]
 
 # Comentario a insertar al final
