@@ -3,7 +3,7 @@ name: Agregar comentarios a main.py y pushear a la rama diego
 on:
   push:
     branches:
-      - main  # Ejecutar en cada push a la rama main
+      - main # Ejecutar en cada push a la rama main
   pull_request:
 
 jobs:
@@ -11,41 +11,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout del repositorio
-      uses: actions/checkout@v3
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
 
-    - name: Configurar Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.12'
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
 
-    - name: Ejecutar script para agregar comentarios
-      run: |
-        python3 script.py
+      - name: Ejecutar script para agregar comentarios
+        run: |
+          python3 script.py
 
-    - name: Configurar nombre y correo para Git
-      run: |
-        git config --global user.name "AlexanderSanchezGarcia"
-        git config --global user.email "alexander.sanchez.gm@gmail.com"
+      - name: Configurar nombre y correo para Git
+        run: |
+          git config --global user.name "dvillagrans"
+          git config --global user.email "diegovillasal.gm@gmail.com"
 
-    - name: Borrar la rama diego local y remotamente (si existe)
-      run: |
-        # Borra la rama diego remotamente
-        git push origin --delete diego || echo "No se encontró la rama remota diego"
-        # Borra la rama diego localmente
-        git branch -D diego || echo "No se encontró la rama local diego"
+      - name: Borrar la rama diego local y remotamente (si existe)
+        run: |
+          # Borra la rama diego remotamente
+          git push origin --delete diego || echo "No se encontró la rama remota diego"
+          # Borra la rama diego localmente
+          git branch -D diego || echo "No se encontró la rama local diego"
 
-    - name: Crear de nuevo la rama diego
-      run: |
-        git checkout -b diego
+      - name: Crear de nuevo la rama diego
+        run: |
+          git checkout -b diego
 
-    - name: Commitear los cambios
-      run: |
-        git add .
-        git commit -m "Agregar comentarios a main.py" || echo "No hay cambios para commitear"
+      - name: Commitear los cambios
+        run: |
+          git add .
+          git commit -m "Agregar comentarios a main.py" || echo "No hay cambios para commitear"
 
-    - name: Pushear cambios a la rama diego
-      env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}  # Utiliza el PAT aquí
-      run: |
-        git push https://$GITHUB_TOKEN@github.com/${{ github.repository }} diego
+      - name: Pushear cambios a la rama diego
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }} # Utiliza el PAT aquí
+        run: |
+          git push https://$GITHUB_TOKEN@github.com/${{ github.repository }} diego
