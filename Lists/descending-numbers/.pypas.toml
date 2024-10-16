@@ -1,0 +1,3 @@
+slug = "descending-numbers"
+bundle = [ "docs/README.pdf", "tests/*.py", "main.py", "vendor.py",]
+todo = [ "main.py",]
