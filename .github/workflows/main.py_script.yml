@@ -1,4 +1,4 @@
-name: Agregar comentarios a main.py y pushear a la rama diego
+name: Agregar comentarios a main.py y script2.py
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  agregar_comentarios:
+  agregar_comentarios_main:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Ejecutar script para agregar comentarios
+      - name: Ejecutar script para agregar comentarios en main.py
         run: |
           python3 script.py
 
@@ -39,13 +39,58 @@ jobs:
         run: |
           git checkout -b diego
 
-      - name: Commitear los cambios
+      - name: Commitear los cambios en main.py
         run: |
           git add .
           git commit -m "Agregar comentarios a main.py" || echo "No hay cambios para commitear"
 
       - name: Pushear cambios a la rama diego
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }} # Utiliza el PAT aquí
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
         run: |
           git push https://$GITHUB_TOKEN@github.com/${{ github.repository }} diego
+
+  agregar_comentarios_script2:
+    runs-on: ubuntu-latest
+    needs: agregar_comentarios_main
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Ejecutar script para agregar comentarios en script2.py
+        run: |
+          # Asumimos que script2.py también tiene lógica para agregar comentarios al archivo `script2.py`
+          python3 script2.py
+
+      - name: Configurar nombre y correo para Git
+        run: |
+          git config --global user.name "dvillagrans"
+          git config --global user.email "diegovillasal.gm@gmail.com"
+
+      - name: Borrar la rama alexander local y remotamente (si existe)
+        run: |
+          # Borra la rama alexander remotamente
+          git push origin --delete alexander || echo "No se encontró la rama remota alexander"
+          # Borra la rama alexander localmente
+          git branch -D alexander || echo "No se encontró la rama local alexander"
+
+      - name: Crear de nuevo la rama alexander
+        run: |
+          git checkout -b alexander
+
+      - name: Commitear los cambios en script2.py
+        run: |
+          git add .
+          git commit -m "Agregar comentarios a script2.py" || echo "No hay cambios para commitear"
+
+      - name: Pushear cambios a la rama alexander
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
+        run: |
+          git push https://$GITHUB_TOKEN@github.com/${{ github.repository }} alexander
