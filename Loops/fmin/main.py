@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# 2024/10/16
+# @autor: Miguel Alexander Sanchez García
 def f(x: int) -> int:
     return (x ** 2) - (6 * x) + 3
 
@@ -16,3 +21,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Hecho por: Miguel Sanchez

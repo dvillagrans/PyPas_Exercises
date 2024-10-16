@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# 2024/10/16
+# @autor: Miguel Alexander Sanchez García
 def run(to_give_back: float, available_currencies: list) -> dict:
     if to_give_back == 0:
         return {}
@@ -22,3 +27,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Hecho por: Miguel Sanchez

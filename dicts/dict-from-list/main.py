@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# 2024/10/16
+# @autor: Miguel Alexander Sanchez García
 def run(input_list: list[list]) -> dict:
     # Crear un diccionario para almacenar el resultado
     result_dict = {}
@@ -23,3 +28,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Hecho por: Miguel Sanchez
