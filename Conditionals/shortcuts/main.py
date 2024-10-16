@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# 2024/10/16
+# @autor: Miguel Alexander Sanchez García
 def run(key1: str, key2: str, key3: str) -> str:
     action = ""
     key1 = key1.lower()
@@ -25,3 +30,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Hecho por: Miguel Sanchez
