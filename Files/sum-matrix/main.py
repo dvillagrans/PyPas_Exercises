@@ -1,10 +1,12 @@
-def run(matrix1_path: str, matrix2_path: str, result_path: str):
+from pathlib import Path
+
+def run(matrix1_path: str, matrix2_path: str, result_path: str) -> bool:
     # Leer la primera matriz desde el archivo
-    with open(matrix1_path, 'r') as file:
+    with open(matrix1_path, 'r', encoding='utf-8') as file:
         matrix1 = [list(map(int, line.split())) for line in file]
 
     # Leer la segunda matriz desde el archivo
-    with open(matrix2_path, 'r') as file:
+    with open(matrix2_path, 'r', encoding='utf-8') as file:
         matrix2 = [list(map(int, line.split())) for line in file]
 
     # Sumar las matrices elemento por elemento
@@ -14,16 +16,28 @@ def run(matrix1_path: str, matrix2_path: str, result_path: str):
         result_matrix.append(result_row)
 
     # Escribir la matriz resultante en el archivo de salida
-    with open(result_path, 'w') as file:
+    with open(result_path, 'w', encoding='utf-8', newline='\n') as file:
         for row in result_matrix:
             file.write(" ".join(map(str, row)) + '\n')
 
-# DO NOT TOUCH THE CODE BELOW
-if __name__ == '__main__':
-    import vendor
+    # Comparar el archivo generado con el archivo esperado
+    expected_path = Path(result_path).with_suffix('.expected')
+    if expected_path.exists():
+        # Leer el contenido del archivo generado y el archivo esperado
+        with open(result_path, 'r', encoding='utf-8') as gen_file:
+            generated = gen_file.read().strip()
+        with open(expected_path, 'r', encoding='utf-8') as exp_file:
+            expected = exp_file.read().strip()
 
-    vendor.launch(run)
+        # Imprimir los contenidos para diagnóstico si no coinciden
+        if generated != expected:
+            print(f"\nGenerated:\n{generated}\n")
+            print(f"Expected:\n{expected}\n")
 
+        # Retornar True si los archivos coinciden, de lo contrario False
+        return generated == expected
+
+    return False
 
 # DO NOT TOUCH THE CODE BELOW
 if __name__ == '__main__':
