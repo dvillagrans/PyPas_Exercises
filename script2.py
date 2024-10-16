@@ -1,18 +1,17 @@
 import os
 from datetime import datetime
-fecha_actual = datetime.now().strftime("%Y/%m/%d")
 
 # Comentarios a insertar al inicio
 comentarios_inicio = [
     "# E S C O M  -  I P N",
     "# D A A D",
     "# 4AV1",
-    f"# {fecha_actual}",
+    f"# Oct 15°, 2024",
     "# @autor: Miguel Alexander Sanchez García"
 ]
 
 # Comentario a insertar al final
-comentario_final = "# Hecho por: Miguel Sanchez"
+comentario_final = "# Developed by MASG"
 
 # Función para agregar comentarios solo si no están presentes
 def agregar_comentarios(file_path):
