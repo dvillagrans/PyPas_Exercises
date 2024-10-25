@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 # TODO
 def consecutive_seq(items, target_count, index=0, current_count=1):
     if index + 1 >= len(items):
@@ -23,3 +28,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(consecutive_seq)
+
+# Made by DVS

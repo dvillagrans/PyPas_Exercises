@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 def run(player1: str, player2: str) -> int:
     player1 = player1.lower()
     player2 = player2.lower()
@@ -25,3 +30,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Made by DVS

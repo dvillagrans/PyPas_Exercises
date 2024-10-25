@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 def run(values: list) -> tuple:
     # Inicializar min_value y max_value con el primer elemento de la lista
     min_value = values[0]
@@ -17,3 +22,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Made by DVS

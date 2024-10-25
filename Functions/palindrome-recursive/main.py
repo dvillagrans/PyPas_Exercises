@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 # TODO
 def is_palindrome(text, start=0, end=None):
     if end is None:
@@ -18,3 +23,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(is_palindrome)
+
+# Made by DVS

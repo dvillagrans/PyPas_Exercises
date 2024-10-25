@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 # TODO
 class IntegerStack:
     def __init__(self, *, max_size: int = 10):
@@ -82,3 +87,5 @@ class IntegerStackIterator:
         value = self.stack.items[self.index]
         self.index += 1
         return value
+
+# Made by DVS

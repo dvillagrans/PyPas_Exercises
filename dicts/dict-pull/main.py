@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 def run(input_dict: dict, keys: tuple) -> dict:
     # Utilizar comprensión de diccionarios para extraer solo las claves presentes
     extracted_dict = {key: input_dict[key] for key in keys if key in input_dict}
@@ -19,3 +24,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Made by DVS

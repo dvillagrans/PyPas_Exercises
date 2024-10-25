@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 def run(n: int) -> int:
     if n >= 0 and n <= 9:
         str_n = str(n)
@@ -10,3 +15,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Made by DVS

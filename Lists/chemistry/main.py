@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 def run(formula: list) -> bool:
     # Rule 1: Component 1 and Component 2 cannot both be selected.
     if 1 in formula and 2 in formula:
@@ -23,3 +28,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Made by DVS

@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 def run(num_pillars: int, gap_pillars: float, pillar_width: float) -> float:
     total_distance_m = (num_pillars - 1) * gap_pillars
     total_disrance_cm = total_distance_m * 100
@@ -11,3 +16,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Made by DVS

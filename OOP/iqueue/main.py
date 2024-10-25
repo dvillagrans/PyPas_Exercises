@@ -1,3 +1,8 @@
+# Villagran Salazar Diego
+# DAD
+# Fecha de entrega: 2024/09/27
+# Grupo 4AV1
+# Fecha: 2024/10/25
 # TODO
 class IntegerQueue:
     def __init__(self, *, max_size: int = 10):
@@ -81,3 +86,5 @@ class IntegerQueueIterator:
 
     def __iter__(self):
         return self
+
+# Made by DVS
