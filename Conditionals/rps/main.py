@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def run(player1: str, player2: str) -> int:
     player1 = player1.lower()
     player2 = player2.lower()
@@ -25,3 +30,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Developed by MASG

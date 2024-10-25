@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 # TODO
 class IntegerQueue:
     def __init__(self, *, max_size: int = 10):
@@ -81,3 +86,5 @@ class IntegerQueueIterator:
 
     def __iter__(self):
         return self
+
+# Developed by MASG

@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def run(input_path: str, output_path: str) -> None:
     # Leer el archivo de entrada
     with open(input_path, 'r') as file:
@@ -23,3 +28,4 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+# Developed by MASG

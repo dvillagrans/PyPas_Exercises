@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def run(start_code: int, end_code: int) -> None:
     step = 0
     for i in range (start_code, end_code + 1):
@@ -20,3 +25,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Developed by MASG

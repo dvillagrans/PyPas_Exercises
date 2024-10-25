@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def run(matrix_a: list[list[int]], matrix_b: list[list[int]]) -> list[list[int]] or None:
     # Get dimensions of A and B
     rows_a, cols_a = len(matrix_a), len(matrix_a[0])
@@ -23,3 +28,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Developed by MASG

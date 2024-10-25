@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 # Here you have the suits symbols:
 # ♣ ◆ ❤ ♠
 
@@ -61,3 +66,5 @@ class Card:
         if value > 13:
             value -= 13
         return Card(value, suit)
+
+# Developed by MASG

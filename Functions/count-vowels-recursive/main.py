@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def count_vowels(text):
     vowels = ('a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'A', 'E', 'I', 'O', 'U', 'Á', 'É', 'Í', 'Ó', 'Ú')
     
@@ -10,3 +15,5 @@ def count_vowels(text):
 if __name__ == '__main__':
     import vendor
     vendor.launch(count_vowels)
+
+# Developed by MASG

@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 # TODO
 class Date:
     DAYS_IN_MONTH = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -90,3 +95,4 @@ class Date:
         if not isinstance(other, Date):
             return NotImplemented
         return self.get_delta_days() < other.get_delta_days()
+# Developed by MASG

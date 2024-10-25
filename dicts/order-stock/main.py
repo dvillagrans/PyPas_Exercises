@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def run(stock: dict, merch: str, amount: int) -> bool:
     
     available = stock.get(merch, 0) >= amount
@@ -10,3 +15,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Developed by MASG

@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def run(input_dict: dict, keys: tuple) -> dict:
     # Utilizar comprensión de diccionarios para extraer solo las claves presentes
     extracted_dict = {key: input_dict[key] for key in keys if key in input_dict}
@@ -19,3 +24,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Developed by MASG

@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 # TODO
 def is_palindrome(text, start=0, end=None):
     if end is None:
@@ -18,3 +23,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(is_palindrome)
+
+# Developed by MASG

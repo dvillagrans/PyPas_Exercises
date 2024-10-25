@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 def run(formula: list) -> bool:
     # Rule 1: Component 1 and Component 2 cannot both be selected.
     if 1 in formula and 2 in formula:
@@ -23,3 +28,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(run)
+
+# Developed by MASG

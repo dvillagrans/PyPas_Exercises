@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 # TODO
 def is_magic_square(values):
     if not values:
@@ -28,3 +33,5 @@ if __name__ == '__main__':
     import vendor
 
     vendor.launch(is_magic_square)
+
+# Developed by MASG

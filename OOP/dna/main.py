@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 # TODO
 class DNA:
     def __init__(self, sequence: str):
@@ -65,3 +70,5 @@ class DNA:
         if base.upper() not in 'ACGT':
             base = 'A'
         self.sequence = self.sequence[:index] + base.upper() + self.sequence[index + 1:]
+
+# Developed by MASG

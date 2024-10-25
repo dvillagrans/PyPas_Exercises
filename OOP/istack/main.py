@@ -1,3 +1,8 @@
+# E S C O M  -  I P N
+# D A A D
+# 4AV1
+# Oct 15°, 2024
+# @autor: Miguel Alexander Sanchez García
 # TODO
 class IntegerStack:
     def __init__(self, *, max_size: int = 10):
@@ -82,3 +87,5 @@ class IntegerStackIterator:
         value = self.stack.items[self.index]
         self.index += 1
         return value
+
+# Developed by MASG
